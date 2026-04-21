@@ -1,4 +1,4 @@
 # Add the following entries to the crontab (user mode)
 
-@reboot cd /home/(user)/python_dir/servos && PYTHONPATH=/home/(user)/python_dir/servos /home/(user)/.local/share/virtualenvs/(venv)/bin/python /home/(user)/python_dir/servos/keypad.py > /home/(user)/logs/cron_keypad.log 2>&1
+@reboot mkdir -p /home/(user)/logs && cd /home/(user)/python_dir/servos && PYTHONPATH=/home/(user)/python_dir/servos /home/(user)/.local/share/virtualenvs/(venv)/bin/python /home/(user)/python_dir/servos/keypad.py > /home/(user)/logs/cron_keypad.log 2>&1
 @reboot /usr/bin/python3 /home/(user)/python_dir/shutdown_press/shutdown_press_simple.py
