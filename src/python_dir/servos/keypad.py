@@ -38,7 +38,7 @@ GPIO.setup(C4, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 # If it detects a change, the user pressed the button that connects the given line
 # to the detected column
 
-PYTHON = "/home/oreo-pi/.local/share/virtualenvs/servos-LMNKqaei/bin/python"
+PYTHON = "/home/oreo-pi/.local/share/virtualenvs/(venv)/bin/python"
 
 def readLine(line):
     GPIO.output(line, GPIO.HIGH)
