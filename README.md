@@ -42,8 +42,8 @@ A basic animatronic powered by a **Raspberry Pi Zero 2 W** that moves its eyes, 
 ## Dependency Setup
 > ⚠️ This script requires a Python virtual environment. Install dependencies by running:
 ```
-chmod +x rpi-basic-animatronic/src/python_dir/servos/setup_venv.sh
 cd rpi-basic-animatronic/src/python_dir/servos
+chmod +x setup_venv.sh
 ./setup_venv.sh
 ```
 
