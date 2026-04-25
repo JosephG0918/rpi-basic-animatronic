@@ -38,24 +38,24 @@ GPIO.setup(C4, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 # If it detects a change, the user pressed the button that connects the given line
 # to the detected column
 
-PYTHON = "/home/(user)/.local/share/virtualenvs/(venv)/bin/python"
+PYTHON = "/home/<user>/.local/share/virtualenvs/<venv>/bin/python"
 
 def readLine(line):
     GPIO.output(line, GPIO.HIGH)
     if(GPIO.input(C1) == 1 and line == L1):
-        subprocess.Popen(["flock", "-n", "/tmp/script_running.lock", PYTHON, "/home/(user)/python_dir/servos/testing/eyes_test.py"])
+        subprocess.Popen(["flock", "-n", "/tmp/script_running.lock", PYTHON, "/home/<user>/python_dir/servos/testing/eyes_test.py"])
     if(GPIO.input(C2) == 1 and line == L1):
-        subprocess.Popen(["flock", "-n", "/tmp/script_running.lock", PYTHON, "/home/(user)/python_dir/servos/testing/jaw_test.py"])
+        subprocess.Popen(["flock", "-n", "/tmp/script_running.lock", PYTHON, "/home/<user>/python_dir/servos/testing/jaw_test.py"])
     if(GPIO.input(C3) == 1 and line == L1):
-        subprocess.Popen(["flock", "-n", "/tmp/script_running.lock", PYTHON, "/home/(user)/python_dir/servos/testing/neck_test.py"])
+        subprocess.Popen(["flock", "-n", "/tmp/script_running.lock", PYTHON, "/home/<user>/python_dir/servos/testing/neck_test.py"])
     if(GPIO.input(C4) == 1 and line == L1):
-        subprocess.Popen(["flock", "-n", "/tmp/script_running.lock", PYTHON, "/home/(user)/python_dir/servos/testing/test_run.py"])
+        subprocess.Popen(["flock", "-n", "/tmp/script_running.lock", PYTHON, "/home/<user>/python_dir/servos/testing/test_run.py"])
     if(GPIO.input(C1) == 1 and line == L4):
-        subprocess.Popen(["flock", "-n", "/tmp/script_running.lock", PYTHON, "/home/(user)/python_dir/servos/movements/casual.py"])
+        subprocess.Popen(["flock", "-n", "/tmp/script_running.lock", PYTHON, "/home/<user>/python_dir/servos/movements/casual.py"])
     if(GPIO.input(C2) == 1 and line == L4):
-        subprocess.Popen(["flock", "-n", "/tmp/script_running.lock", PYTHON, "/home/(user)/python_dir/servos/movements/laughing.py"])
+        subprocess.Popen(["flock", "-n", "/tmp/script_running.lock", PYTHON, "/home/<user>/python_dir/servos/movements/laughing.py"])
     if(GPIO.input(C3) == 1 and line == L4):
-        subprocess.Popen(["flock", "-n", "/tmp/script_running.lock", PYTHON, "/home/(user)/python_dir/servos/movements/scared.py"])
+        subprocess.Popen(["flock", "-n", "/tmp/script_running.lock", PYTHON, "/home/<user>/python_dir/servos/movements/scared.py"])
     GPIO.output(line, GPIO.LOW)
 
 try:
