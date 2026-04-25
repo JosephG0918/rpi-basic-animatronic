@@ -40,7 +40,7 @@ A basic animatronic powered by a **Raspberry Pi Zero 2 W** that moves its eyes, 
 > ⚠️ Always use the soft shutdown button before turning off the hard power switch to avoid SD card corruption.
 
 ## Dependency Setup
-> ⚠️ This script requires a Python virtual environment. Install dependencies by running:
+> ⚠️ This script requires a Python virtual environment. Create the virtual environment and install dependencies by running:
 ```
 cd rpi-basic-animatronic/src/python_dir/servos
 chmod +x setup_venv.sh
